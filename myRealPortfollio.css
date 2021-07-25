@@ -1,0 +1,738 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+html
+{
+    font-size: 100%;
+}
+:root
+{
+    --display: -10;
+    --img:url("menu.png");
+    --hide:none;
+    --hid:none;
+    --one:2%;
+    --two:2%;
+    --three:2%;
+}
+.active
+{
+    --display: 1;
+    --img:url("close.png");
+    --hide:block;
+    --one:85%;
+    --two:55%;
+    /* --hid:block; */
+    --three:35%;
+}
+.co
+{
+    --hid:block;
+}
+#hide
+{
+    display: var(--hide);
+}
+.Home
+{
+    width: 100%;
+    height: 100vh;
+    /* background: rgb(168, 41, 252); */
+    background: #FFD700;
+}
+.Home .nav_logo
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: #ffd000; */
+}
+.Home .nav_logo .logo 
+{
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    /* font-weight: 600px; */
+}
+.Home .nav_logo .logo span
+{
+    color: rgb(255, 255, 255);
+}
+.Home .nav_logo .menu
+{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--img) no-repeat;
+}
+.Home nav
+{
+    position: absolute;
+    width: 20%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.459);
+    box-shadow: 0px 0px 5px rgb(184, 184, 184);
+    right: 2%;
+    top: 50px;
+    border: 4px solid rgb(255, 255, 255);
+    backdrop-filter: blur(25px);
+    /* display: var(--display); */
+    z-index: var(--display);
+}
+.Home nav ul li 
+{
+    list-style: none;
+    margin-bottom: 25px;
+    text-align: center;
+    /* background: gray; */
+}
+.Home nav ul li a
+{
+    text-decoration: none;
+    color: #000000;
+    font-size: 35px;
+    cursor: pointer;
+}
+.Home nav ul li a:hover
+{
+    color: #0026ff;
+}
+.Home #menu .advanc
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    letter-spacing: 3px;
+    color: rgb(0, 17, 255);
+}
+.Home #menu #color
+{
+    position: absolute;
+    top: 10%;
+    width: 300px;
+    height: 500px;
+    display: grid;
+    /* grid-gap: 10px; */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    background: rgb(255, 255, 255);
+    /* display: none; */
+}
+.Home #menu .min_2
+{
+    position: absolute;
+    left: 0%;
+    top: 10%;
+    display: var(--hid);
+}
+.Home #menu #color div
+{
+    margin: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.Home #menu #color div:nth-child(1)
+{
+    background: red;
+}
+
+.Home #menu #color div:nth-child(2)
+{
+    background: rgb(217, 255, 0);
+}
+
+.Home #menu #color div:nth-child(3)
+{
+    background: rgb(0, 26, 255);
+}
+
+.Home #menu #color div:nth-child(4)
+{
+    background: rgb(0, 255, 221);
+}
+
+.Home #menu #color div:nth-child(5)
+{
+    background: rgb(0, 255, 34);
+}
+
+.Home #menu #color div:nth-child(6)
+{
+    background: rgb(255, 0, 157);
+}
+
+.Home #menu #color div:nth-child(7)
+{
+    background: #FFD700;
+}
+
+.Home #menu #color div:nth-child(8)
+{
+    background: rgb(255, 0, 0);
+}
+
+.Home .min 
+{
+    width: 100%;
+    height: 80vh;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: purple; */
+}
+.Home .min .text
+{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    margin-left: 5%;
+    padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+    /* background: yellow; */
+}
+.Home .min .text h5
+{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+.Home .min .text h4 span
+{
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: red;
+}
+.Home .min .text h1
+{
+    font-size: 6rem;
+}
+.Home .min .text .button button
+{
+    margin-top: 2rem;
+    width: 140px;
+    height: 45px;
+    background: transparent;
+    /* border: 1px solid #fff; */
+    background: black;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.Home .min .text .button button:hover
+{
+    background: transparent;
+    color: #000000;
+    border: 3px solid #fff;
+}
+.Home .min .text .button button:nth-child(2)
+{
+    margin-left: 1.5rem;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border: 3px solid #fff;
+
+}
+.Home .min .text .button button:nth-child(2):hover
+{
+    background: black;
+    color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+}
+.Home .min .img
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: violet; */
+}
+
+.Home .min .img .img_style
+{
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 15px solid #fff;
+    background: #000000;
+    overflow: hidden;
+}
+.Home .min .img .img_style img 
+{
+    width: 95%;
+}
+/* about section  */
+.about
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+.about .text 
+{
+    width: 48%;
+    height: 100%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background: blue; */
+    position: relative;
+}
+
+.about .text .title
+{
+    position: absolute;
+    top: 10px;
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: #ffd900;
+}
+.about .text h1
+{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffd900;
+}
+.about .text h1 span
+{
+    color: #000000;
+}
+.about .text h4
+{
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.about .text p
+{
+    font-size: 1.5rem;
+    /* font-family: 'Roboto', sans-serif; */
+}
+.about .text button
+{
+    margin-top: 20px;
+    width: 130px;
+    height: 35px;
+    background: transparent;
+    font-size: 20px;
+    border: 3px solid yellow;
+    cursor: pointer;
+}
+.about .text button:hover
+{
+    background: yellow;
+}
+.about .age 
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgb(255, 251, 0);
+    /* background: rgb(9, 255, 0); */
+}
+.about .age div
+{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17rem;
+    border-radius: 50%;
+    background: #FFD700;
+    color: rgb(46, 43, 43);
+}
+.about .age button
+{
+    margin-top: 20px;
+    width: 130px;
+    height: 35px;
+    background: transparent;
+    font-size: 20px;
+    border: 3px solid yellow;
+    cursor: pointer;
+}
+.about .age button:hover
+{
+    background: yellow;
+}
+
+/* what_i_do section  */
+.what_i_do
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background: red; */
+}
+.what_i_do .title
+{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #006eff;
+}
+.what_i_do .title_2
+{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+.what_i_do .min
+{
+    width: 100%;
+    height: 80vh;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-gap: 15px;
+    /* grid-template-rows: repeat(1,200px); */
+    /* background: blue; */
+}
+.what_i_do .min .box_1
+{
+    background: rgb(255, 255, 255);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgb(97, 95, 95);
+}
+.what_i_do .min .box_1:hover
+{
+    /* background: yellow; */
+    box-shadow: 0px 5px 5px rgb(167, 165, 165);
+    transform: translateY(-10px);
+}
+.what_i_do .min .box_1 .img
+{
+    width: 200px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    /* background: red; */
+}
+.what_i_do .min .box_1 .img img
+{
+    /* width: 180px; */
+    width: 165px;
+}
+.what_i_do .min .box_1 p
+{
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+/* skill section  */
+.skill
+{
+    width: 100%;
+    height: 100vh;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.skill .title
+{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    color: #006eff;
+}
+.skill .skill_div
+{
+    margin-top: 5%;
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: blue; */
+    box-shadow: 0px 0px 5px rgb(165, 164, 164);
+}
+.skill .skill_div .html
+{
+    width: 60%;
+    height: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.skill .skill_div .html span
+{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: -20px;
+    background: rgb(119, 119, 119);
+}
+.skill .skill_div .html div
+{
+    position: absolute;
+    width: var(--one);
+    height: 10px;
+    bottom: -23px;
+    background: yellow;
+    transition: 3s;
+}
+.skill .skill_div .html #two
+{
+    width: var(--two);
+    transition: 1s;
+}
+
+.skill .skill_div .html #three
+{
+    width: var(--three);
+    transition: 1s;
+}
+.skill .skill_div .html h1
+{
+    font-size: 1rem;
+}
+
+
+/* contact section  */
+.contact
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-direction: column; */
+    position: relative;
+    /* background: red; */
+}
+.contact .title
+{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #006eff;
+}
+.contact .text
+{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    margin-top: 5%;
+    /* box-shadow: 0px 0px 5px rgb(128, 126, 126); */
+    /* background: blue; */
+}
+.contact .text a
+{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+.contact .text h1
+{
+    color: blue;
+}
+.contact .text h2
+{
+    color: rgb(84, 83, 82);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+.contact .img
+{
+    width: 50%;
+    height: 80vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    /* background: rgb(13, 192, 13); */
+}
+.contact .img img
+{
+    width: 80%;
+}
+.contact .text_2
+{
+    width: 72%;
+    height: 10vh;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* background: black; */
+    box-shadow: 0px 0px 5px rgb(168, 168, 168);
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+}
+.contact .text_2:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 5px rgb(161, 161, 161);
+}
+.contact .text_3
+{
+    width: 72%;
+    height: 10vh;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    /* background: black; */
+    /* justify-content: space-between; */
+    box-shadow: 0px 0px 5px rgb(129, 127, 127);
+    display: flex;
+    padding: 5px;
+}
+.contact .text_3:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 5px rgb(161, 161, 161);
+}
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .what_i_do .min{grid-template-columns: repeat(1,600px);}
+    .about .text{height: 87%;height: auto;}
+    .about .text p {font-size: 1.2rem;}
+    .Home .min .text h1{font-size: 3.5rem;}
+    .Home nav{width: 50%;}
+    .what_i_do .min {margin-top: 25%;}
+    .what_i_do .title_2{text-align: center;}
+    .contact {flex-direction: column;margin-top: 43%;    margin-top: 10%;}
+    .contact .text{width: 100%;display: flex;justify-content: center;align-items: center;}
+    .contact .text_2 {width: 100%;}
+    .contact .text_3{width: 100%;}
+    .contact .title{top: -5%;}
+    .about .text .title{top: -65px;}
+    .skill{margin-top: 40%;}
+    .Home #menu #color {width: 380px;grid-template-columns: repeat(2,1fr);}
+}
+
+
+@media screen and (min-width:601px) and (max-width:768px){
+    html{font-size: 70%;}
+    .Home nav{width: 50%;top: 80px;}
+    .Home .nav_logo{height: 90px; }
+    .Home .min {flex-direction: column;}
+    .about{flex-direction: column;}
+    .about .text{width: 100%; }
+    .Home .min .img{width: 100%;}
+    .Home .min .text{margin-right: 0%;width: 85%;}
+    .what_i_do .min {  grid-template-columns: repeat(1,550px);}
+    .about .text h1{font-size: 3.5rem;}
+    .about .text p {font-size: 2rem;}
+    .about .age {width: 100%;}
+    .about .age h3{font-size: 2rem;}
+    .about .age button{width: 200px;height: 50px;font-size: 2rem;}
+    .what_i_do .title_2 {font-size: 1.3rem;}
+    .what_i_do .min .box_1 h1{font-size: 2rem;}
+    .contact{flex-direction: column; margin-top: 50%;}
+    .contact .title{top: -10px;}
+    .contact .text {width: 100%; height: 40vh;margin-top: 15%;}
+    .contact .text_2{width: 95%;}
+    .contact .text_3{width: 95%;}
+    .contact .img{width: 100%;}
+    .what_i_do .min{height: auto;}
+    .what_i_do .min {margin-top: 65%;}
+    .what_i_do .title{margin-top: 10px;}
+    .about .text h1{margin-top: 20%;}
+    .what_i_do {margin-top: 20%;}
+    .what_i_do .title_2 {top: 8%;font-size: 1.2rem;}
+    .Home .min .text h4{font-size: 2rem;}
+    .Home .min .text h4 span{width: 30%;}
+    .Home .min .text .button button{font-size: 1.3rem;width: 157px;height: 55px;}
+    .about .text button{width: 185px; height: 56px;    font-size: 25px;}
+    .skill .skill_div {    margin-top: 90%;}
+    .skill .title {top: 42%;}
+    .Home #menu #color{width: 305px; height: 580px;padding: 5px;grid-template-columns: repeat(3,1fr);}
+}
+
+@media screen and (min-width:200px) and (max-width:600px){
+    html{font-size: 70%;}
+    .Home .min{flex-direction: column;}
+    .Home .min .text {width: 88%;}
+    .Home .min .text h1{font-size: 4rem;}
+    .Home .min .text h4{font-size: 2rem;}
+    .Home .min .text .button button{font-size: 1.5rem;}
+    .Home .min .img {width: 100%;}
+    .Home nav{width: 65%;right: 8%;}
+    .about{flex-direction: column;    margin-top: 10%;}
+    .about .text{width: 100%;}
+    .about .text h1{margin-top: 15%;}
+    .about .age{width: 100%;}
+    .about .age h2{font-size: 2rem;}
+    .about .age div {width: 300px;height: 300px;}
+    .what_i_do{height: auto;margin-top: 10%;}
+    .what_i_do .min{height: auto;margin-top: 50%}
+    .what_i_do .title{font-size: 2.5rem;}
+    .what_i_do .title_2{text-align: center;top: 6%}
+    .what_i_do .min{grid-template-columns: repeat(1,350px);}
+    .contact{flex-direction: column;}
+    .contact .text{width: 99%;margin-top: 30%;}
+    .contact .text_2 {width: 92%;}
+    .contact .text_3 {width: 92%;}
+    .contact .title {top: 41px;font-size: 2.5rem;text-align: center;}
+    .what_i_do .min .box_1 h1{font-size: 2rem;}
+    .contact .img {width: 85%;}
+    .contact .img img{width: 90%;}
+    .skill .title{font-size: 3rem;}
+    .skill .skill_div{width: 95%;}
+    .Home #menu #color { width: 237px; grid-template-columns: repeat(2,1fr);}
+}
+@media screen and (max-width:375px){
+    .what_i_do .min{margin-top: 65%;}
+    .what_i_do{    margin-top: 23%;}
+}
